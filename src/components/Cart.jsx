@@ -14,8 +14,8 @@ const Cart = () => {
         <p className="text-center text-gray-600 text-lg">Your Cart is Empty.</p>
       ) : (
         <div className="max-w-3xl mx-auto">
-          {cartItems.map((item) => (
-            <CartItem key={item.id} item={item} />
+          {cartItems.map((item, index) => (
+            <CartItem key={`${item.id}-${index}`} item={item} />
           ))}
 
           <div className="text-right mt-6">
@@ -23,6 +23,16 @@ const Cart = () => {
               Total: ${total.toFixed(2)}
             </p>
           </div>
+
+          <div className="text-right mt-4">
+            <Link
+              to="/checkout"
+              className="inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+            >
+              Proceed to Checkout
+            </Link>
+          </div>
+
         </div>
       )}
     </div>

@@ -7,6 +7,10 @@ const ProductList = lazy(() => import("../components/ProductList"));
 const ProductDetails = lazy(() => import("../components/ProductDetails"));
 const Cart = lazy(() => import("../components/Cart"));
 const NotFound = lazy(() => import("../components/NotFound"));
+const Checkout = lazy(() => import("../components/Checkout"));
+
+<Route path="/checkout" element={<Checkout />} />
+
 
 function AppRoutes() {
   return (

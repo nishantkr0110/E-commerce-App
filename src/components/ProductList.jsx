@@ -3,6 +3,8 @@ import useFetch from "../utils/UseFetch";
 import { useState } from "react";
 
 const ProductList = () => {
+
+  //Fetch all products from API using a custom hook.
   const {data, loading, error} = useFetch("https://dummyjson.com/products");
   const [search, setSearch] = useState("");
 

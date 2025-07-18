@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
@@ -19,7 +20,7 @@ const ProductItem = ({ product }) => {
 
         <div className="flex justify-between mt-4">
           <Link
-             to={`/prpduct/${product.id}`}
+             to={`/product/${product.id}`}
              className="text-purple-600 hover:text-purple-800 font-semibold text-sm">
               View Details
           </Link>
@@ -34,4 +35,4 @@ const ProductItem = ({ product }) => {
   );
 }
 
-export default ProductItem;
+export default React.memo(ProductItem);
